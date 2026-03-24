@@ -34,7 +34,7 @@ jobs:
         
     - name: Upload artifacts
       if: ${{ success() }}
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v4
       with:
         name: ${{ steps.repname.outputs.REPOSITORY_NAME }}-${{ steps.slug.outputs.sha8 }}
         path: './**/*.elf'
